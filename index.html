@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TORZY DIGITAL | Informatique, Réseaux & Solutions Numériques</title>
+<meta name="description" content="Laptops, accessoires, antivirus, mini-routeurs, Starlink, maintenance informatique, installation Windows et Office sous licence, réseaux MikroTik et portails captifs.">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; form-action 'none'; base-uri 'none'; frame-ancestors 'none'">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B2A3C'/%3E%3Cpath d='M14 20h36v8H36v22h-8V28H14z' fill='%23FF6A1A'/%3E%3C/svg%3E">
+<style>
+:root{--ink:#0B2A3C;--ink2:#123A52;--paper:#F5F7F9;--line:#D5DDE4;--text:#1B2B38;--mute:#52667A;--cable:#FF6A1A;--cable-d:#C94A00;--ok:#1B7F4B;--err:#B3261E;--r:10px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text);background:var(--paper)}
+h1,h2,h3{font-family:"Trebuchet MS","Segoe UI",system-ui,sans-serif;line-height:1.15;letter-spacing:-.02em;color:var(--ink)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--cable);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.skip{position:absolute;left:-999px;top:8px;background:#fff;padding:8px 14px;border-radius:6px;z-index:99}
+.skip:focus{left:8px}
+header{position:sticky;top:0;z-index:20;background:rgba(11,42,60,.97);color:#fff}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font:800 20px "Trebuchet MS",sans-serif;text-decoration:none;letter-spacing:.02em}
+.logo b{color:var(--cable)}
+nav ul{display:flex;gap:6px;list-style:none;padding:0}
+nav a{display:block;padding:8px 12px;text-decoration:none;border-radius:6px;font-size:15px}
+nav a:hover{background:var(--ink2)}
+nav a.cta{background:var(--cable);color:#1a0c00;font-weight:700}
+nav a.cta:hover{background:#ff8442}
+.burger{display:none;background:none;border:1px solid #4d6b82;color:#fff;border-radius:8px;padding:8px 12px;font:inherit;cursor:pointer}
+.hero{background:var(--ink);color:#fff;padding:72px 0 64px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero h1{color:#fff;font-size:clamp(34px,5vw,56px);margin-bottom:18px}
+.hero p{color:#C9D8E4;max-width:52ch;margin-bottom:28px;font-size:18px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:13px 22px;border-radius:var(--r);font-weight:700;text-decoration:none;border:2px solid transparent;cursor:pointer;font:inherit;font-weight:700}
+.btn.p{background:var(--cable);color:#1a0c00}.btn.p:hover{background:#ff8442}
+.btn.s{border-color:#5b7a91;color:#fff}.btn.s:hover{background:var(--ink2)}
+.topo{width:100%;height:auto}
+.topo .link{stroke:#5b7a91;stroke-width:2;fill:none}
+.topo .pulse{stroke:var(--cable);stroke-width:3;fill:none;stroke-dasharray:8 14;animation:flow 1.6s linear infinite}
+.topo text{fill:#C9D8E4;font:600 13px system-ui,sans-serif}
+@keyframes flow{to{stroke-dashoffset:-22}}
+@media (prefers-reduced-motion:reduce){.topo .pulse{animation:none}html{scroll-behavior:auto}}
+section{padding:72px 0}
+section.alt{background:#fff;border-block:1px solid var(--line)}
+.head{max-width:640px;margin-bottom:34px}
+.head h2{font-size:clamp(26px,3.4vw,36px);margin-bottom:10px}
+.head p{color:var(--mute)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.filters button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 16px;font:inherit;cursor:pointer;color:var(--text)}
+.filters button[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.item{background:#fff;border:1px solid var(--line);border-left:4px solid var(--cable);border-radius:var(--r);padding:20px;display:flex;flex-direction:column;gap:8px}
+.item h3{font-size:18px}
+.item p{color:var(--mute);font-size:15px;flex:1}
+.item .tag{font-size:13px;color:var(--cable-d);font-weight:700}
+.item button{align-self:flex-start;background:none;border:0;color:var(--ink);font:inherit;font-weight:700;text-decoration:underline;cursor:pointer;padding:4px 0}
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.svc article{padding:24px;border:1px solid var(--line);border-radius:var(--r);background:var(--paper)}
+.svc h3{font-size:20px;margin-bottom:10px}
+.svc ul{padding-left:20px;color:var(--mute)}
+.svc li{margin:4px 0}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;counter-reset:s;list-style:none;padding:0}
+.steps li{counter-increment:s;padding:20px 22px;border-left:3px solid var(--cable)}
+.steps li::before{content:counter(s);display:block;font:800 28px "Trebuchet MS",sans-serif;color:var(--cable-d)}
+.steps strong{display:block;color:var(--ink)}
+.steps span{color:var(--mute);font-size:15px}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.why div{border-top:3px solid var(--ink);padding-top:12px}
+.why h3{font-size:18px;margin-bottom:6px}.why p{color:var(--mute);font-size:15px}
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px}
+.info a{color:var(--cable-d);font-weight:700}
+.info p{margin-bottom:12px}
+form{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:600;font-size:15px}
+input,select,textarea{font:inherit;padding:11px 12px;border:1px solid #9FB0BF;border-radius:8px;background:#fff;color:var(--text);width:100%}
+textarea{min-height:120px;resize:vertical}
+input[aria-invalid=true],textarea[aria-invalid=true]{border-color:var(--err)}
+.err{color:var(--err);font-size:14px;font-weight:500;min-height:1.1em}
+.hp{position:absolute;left:-9999px;height:0;overflow:hidden}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.chan{display:flex;gap:16px;flex-wrap:wrap;font-weight:500}
+.chan label{display:flex;align-items:center;gap:6px;font-weight:500}
+.chan input{width:auto}
+#status{font-weight:600;min-height:1.4em}
+#status.ok{color:var(--ok)}#status.bad{color:var(--err)}
+footer{background:var(--ink);color:#C9D8E4;padding:36px 0;font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between}
+footer strong{color:#fff}
+@media (max-width:860px){
+.hero .wrap,.contact{grid-template-columns:1fr}
+.burger{display:block}
+nav ul{display:none;position:absolute;top:64px;left:0;right:0;background:var(--ink);flex-direction:column;padding:10px 22px 18px}
+nav ul.open{display:flex}
+.row{grid-template-columns:1fr}
+section{padding:52px 0}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header>
+ <div class="wrap nav">
+  <a class="logo" href="#accueil" aria-label="TORZY DIGITAL, accueil">TORZY<b>.</b>DIGITAL</a>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">Menu</button>
+  <nav aria-label="Navigation principale">
+   <ul id="menu">
+    <li><a href="#produits">Produits</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#reseaux">Réseaux</a></li>
+    <li><a href="#apropos">À propos</a></li>
+    <li><a class="cta" href="#contact">Demander un devis</a></li>
+   </ul>
+  </nav>
+ </div>
+</header>
+
+<main id="contenu">
+<div class="hero" id="accueil">
+ <div class="wrap">
+  <div>
+   <h1>Du matériel fiable. Un réseau qui tient.</h1>
+   <p>TORZY DIGITAL vend et installe le matériel informatique et les solutions réseau dont vous avez besoin : laptops, antivirus, mini-routeurs, Starlink, MikroTik et portails captifs. Maintenance et configuration incluses.</p>
+   <div class="btns">
+    <a class="btn p" href="#contact">Demander un devis</a>
+    <a class="btn s" href="#services">Voir nos services</a>
+   </div>
+  </div>
+  <svg class="topo" viewBox="0 0 420 320" role="img" aria-label="Schéma d'un réseau : Starlink vers routeur MikroTik vers portail captif et appareils clients">
+   <path class="link" d="M210 50V120M210 170V230M210 230H80V270M210 230H210V270M210 230H340V270"/>
+   <path class="pulse" d="M210 50V120M210 170V230M210 230H80V270M210 230H210V270M210 230H340V270"/>
+   <g fill="#123A52" stroke="#5b7a91" stroke-width="2">
+    <circle cx="210" cy="36" r="22"/><rect x="170" y="120" width="80" height="50" rx="8"/>
+    <rect x="50" y="270" width="60" height="30" rx="6"/><rect x="180" y="270" width="60" height="30" rx="6"/><rect x="310" y="270" width="60" height="30" rx="6"/>
+   </g>
+   <circle cx="210" cy="36" r="6" fill="#FF6A1A"/>
+   <text x="245" y="40">Starlink</text><text x="258" y="150">MikroTik + portail captif</text>
+   <text x="62" y="316">Laptops</text><text x="196" y="316">Mobiles</text><text x="322" y="316">Clients</text>
+  </svg>
+ </div>
+</div>
+
+<section id="produits">
+ <div class="wrap">
+  <div class="head"><h2>Produits</h2><p>Choisissez une catégorie, puis demandez un devis. Les prix et la disponibilité sont confirmés à la demande.</p></div>
+  <div class="filters" id="filters" role="group" aria-label="Filtrer les produits"></div>
+  <div class="grid" id="catalog" aria-live="polite"></div>
+ </div>
+</section>
+
+<section class="alt" id="services">
+ <div class="wrap">
+  <div class="head"><h2>Services techniques</h2><p>Nos techniciens interviennent sur vos appareils et vos installations.</p></div>
+  <div class="svc">
+   <article><h3>Maintenance des laptops</h3><ul><li>Diagnostic et réparation des pannes courantes</li><li>Remplacement de disque, RAM, batterie, écran, clavier</li><li>Nettoyage, pâte thermique, suppression des virus</li></ul></article>
+   <article><h3>Systèmes et Microsoft Office</h3><ul><li>Installation et configuration de Windows</li><li>Microsoft Office sous licence adaptée à votre usage</li><li>Sauvegarde et transfert de vos données</li></ul></article>
+   <article><h3>Sécurité informatique</h3><ul><li>Antivirus pour particuliers et entreprises</li><li>Durcissement des postes et des mots de passe</li><li>Conseils pour limiter les risques</li></ul></article>
+  </div>
+ </div>
+</section>
+
+<section id="reseaux">
+ <div class="wrap">
+  <div class="head"><h2>Réseaux professionnels</h2><p>Un accès Internet partagé, contrôlé et stable pour votre établissement, votre hôtel, votre cybercafé ou votre entreprise.</p></div>
+  <ol class="steps">
+   <li><strong>Étude du besoin</strong><span>Nombre d'utilisateurs, surface à couvrir, budget.</span></li>
+   <li><strong>Fourniture du matériel</strong><span>Starlink, routeurs MikroTik, points d'accès.</span></li>
+   <li><strong>Installation et configuration</strong><span>Portail captif, comptes, limites de débit, anti-partage de connexion.</span></li>
+   <li><strong>Suivi</strong><span>Tests, formation de votre équipe, assistance.</span></li>
+  </ol>
+ </div>
+</section>
+
+<section class="alt" id="apropos">
+ <div class="wrap">
+  <div class="head"><h2>Pourquoi TORZY DIGITAL</h2><p>Notre mission : rendre la technologie plus accessible, plus sécurisée et plus efficace.</p></div>
+  <div class="why">
+   <div><h3>Équipements fiables</h3><p>Du matériel sélectionné pour durer et couvert par un suivi après-vente.</p></div>
+   <div><h3>Licences adaptées</h3><p>Systèmes et Office installés sous licences, sans solutions douteuses.</p></div>
+   <div><h3>Accompagnement technique</h3><p>Un interlocuteur qui explique, installe et reste disponible.</p></div>
+   <div><h3>Pour tous les profils</h3><p>Particuliers, professionnels, entreprises et établissements.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="wrap contact">
+  <div class="info">
+   <div class="head"><h2>Demander un devis</h2><p>Décrivez votre besoin. Votre message s'ouvre dans WhatsApp ou dans votre messagerie, prêt à être envoyé.</p></div>
+   <p>WhatsApp : <a id="waLink" href="#contact">à configurer</a></p>
+   <p>E-mail : <a id="mailLink" href="#contact">à configurer</a></p>
+   <p id="addr"></p>
+  </div>
+  <form id="form" novalidate autocomplete="on">
+   <div class="row">
+    <label>Nom complet<input name="name" required maxlength="80" autocomplete="name"><span class="err" data-for="name"></span></label>
+    <label>Téléphone<input name="phone" type="tel" required maxlength="20" inputmode="tel" autocomplete="tel" placeholder="+235 ..."><span class="err" data-for="phone"></span></label>
+   </div>
+   <label>Sujet
+    <select name="subject" id="subject" required>
+     <option value="">Choisir…</option>
+     <option>Achat d'un laptop</option><option>Accessoires informatiques</option><option>Antivirus</option><option>Mini-routeur</option><option>Starlink</option>
+     <option>Maintenance d'un laptop</option><option>Installation Windows / Office</option><option>Réseau MikroTik / portail captif</option><option>Autre</option>
+    </select><span class="err" data-for="subject"></span>
+   </label>
+   <label>Message<textarea name="message" required minlength="10" maxlength="800"></textarea><span class="err" data-for="message"></span></label>
+   <div class="hp" aria-hidden="true"><label>Ne pas remplir<input name="website" tabindex="-1" autocomplete="off"></label></div>
+   <fieldset class="chan" style="border:0;padding:0"><legend style="font-weight:600;font-size:15px;margin-bottom:6px">Envoyer par</legend>
+    <label><input type="radio" name="chan" value="wa" checked>WhatsApp</label>
+    <label><input type="radio" name="chan" value="mail">E-mail</label>
+   </fieldset>
+   <button class="btn p" type="submit">Préparer mon message</button>
+   <p id="status" role="status"></p>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div><strong>TORZY DIGITAL</strong><br>Informatique, Réseaux &amp; Solutions Numériques</div>
+  <div>Votre partenaire de confiance pour un monde toujours plus connecté.<br>© <span id="year"></span> TORZY DIGITAL. Tous droits réservés.</div>
+ </div>
+</footer>
+
+<script>
+"use strict";
+/* ===== CONFIGURATION : à remplir avant la mise en ligne ===== */
+const CONFIG = {
+  whatsapp: "",          // numéro international sans + ni espaces, ex. 235XXXXXXXX
+  email: "",             // ex. contact@votredomaine.com
+  address: ""            // facultatif, ex. "Quartier ..., N'Djamena"
+};
+/* ============================================================ */
+
+const PRODUCTS = [
+  {c:"Laptops",n:"Laptops neufs et reconditionnés",d:"Bureautique, études, création, gaming. Garantie et configuration initiale incluses.",t:"Sur devis"},
+  {c:"Laptops",n:"Laptops pour entreprises",d:"Lots de plusieurs postes, préinstallés et prêts à l'emploi.",t:"Tarif par quantité"},
+  {c:"Accessoires",n:"Sacs, souris, claviers",d:"Accessoires de travail au quotidien pour laptops et PC.",t:"Sur devis"},
+  {c:"Accessoires",n:"Chargeurs, batteries, disques SSD",d:"Pièces compatibles avec votre modèle. Indiquez la référence de votre appareil.",t:"Sur devis"},
+  {c:"Sécurité",n:"Antivirus",d:"Protection pour un poste ou pour un parc entier, avec licence.",t:"Licence 1 an"},
+  {c:"Réseau",n:"Mini-routeurs",d:"Partage de connexion pour la maison, le bureau ou le déplacement.",t:"Sur devis"},
+  {c:"Réseau",n:"Kits Starlink",d:"Fourniture et mise en service de l'équipement de connectivité Starlink.",t:"Sur devis"},
+  {c:"Réseau",n:"Routeurs MikroTik",d:"Routeurs et points d'accès pour réseaux professionnels.",t:"Sur devis"}
+];
+const $ = (s,r=document)=>r.querySelector(s);
+const cats = ["Tous",...new Set(PRODUCTS.map(p=>p.c))];
+
+function el(tag,cls,text){const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e}
+
+function renderCatalog(cat){
+  const box=$("#catalog");box.replaceChildren();
+  PRODUCTS.filter(p=>cat==="Tous"||p.c===cat).forEach(p=>{
+    const a=el("article","item");
+    a.append(el("span","tag",p.c+" : "+p.t),el("h3","",p.n),el("p","",p.d));
+    const b=el("button","","Demander un devis");b.type="button";
+    b.addEventListener("click",()=>prefill(p));
+    a.append(b);box.append(a);
+  });
+  document.querySelectorAll("#filters button").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.cat===cat)));
+}
+cats.forEach(c=>{const b=el("button","",c);b.type="button";b.dataset.cat=c;b.addEventListener("click",()=>renderCatalog(c));$("#filters").append(b)});
+renderCatalog("Tous");
+
+const subjectMap={"Laptops":"Achat d'un laptop","Accessoires":"Accessoires informatiques","Sécurité":"Antivirus"};
+function prefill(p){
+  const s=$("#subject");
+  s.value=p.c==="Réseau"?(p.n.includes("Starlink")?"Starlink":p.n.includes("MikroTik")?"Réseau MikroTik / portail captif":"Mini-routeur"):(subjectMap[p.c]||"Autre");
+  const m=$("#form").message;if(!m.value)m.value="Bonjour, je souhaite un devis pour : "+p.n+".";
+  location.hash="#contact";m.focus({preventScroll:true});
+}
+
+/* Menu mobile */
+const burger=$("#burger"),menu=$("#menu");
+burger.addEventListener("click",()=>{const o=menu.classList.toggle("open");burger.setAttribute("aria-expanded",String(o))});
+menu.addEventListener("click",e=>{if(e.target.tagName==="A"){menu.classList.remove("open");burger.setAttribute("aria-expanded","false")}});
+
+/* Coordonnées */
+const wa=String(CONFIG.whatsapp).replace(/\D/g,"");
+if(/^\d{8,15}$/.test(wa)){const a=$("#waLink");a.href="https://wa.me/"+wa;a.textContent="+"+wa;a.rel="noopener noreferrer";a.target="_blank"}
+if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(CONFIG.email)){const a=$("#mailLink");a.href="mailto:"+CONFIG.email;a.textContent=CONFIG.email}
+if(CONFIG.address)$("#addr").textContent=CONFIG.address;
+$("#year").textContent=new Date().getFullYear();
+
+/* Formulaire : validation + envoi via WhatsApp ou e-mail (aucune donnée stockée) */
+const form=$("#form"),status=$("#status"),loadedAt=Date.now();
+const rules={
+  name:v=>v.trim().length>=2||"Entrez votre nom complet.",
+  phone:v=>/^\+?[\d\s().-]{8,20}$/.test(v.trim())||"Entrez un numéro valide (8 chiffres minimum).",
+  subject:v=>v!==""||"Choisissez un sujet.",
+  message:v=>v.trim().length>=10||"Décrivez votre besoin en 10 caractères minimum."
+};
+const clean=s=>s.replace(/[\u0000-\u001F\u007F]+/g," ").trim();
+function validate(){
+  let ok=true;
+  for(const k in rules){
+    const f=form[k],r=rules[k](f.value),m=$('[data-for="'+k+'"]');
+    m.textContent=r===true?"":r;f.setAttribute("aria-invalid",String(r!==true));
+    if(r!==true)ok=false;
+  }
+  return ok;
+}
+form.addEventListener("submit",e=>{
+  e.preventDefault();status.className="";status.textContent="";
+  if(form.website.value){return}                         // anti-robot (honeypot)
+  if(Date.now()-loadedAt<3000){status.className="bad";status.textContent="Patientez un instant puis réessayez.";return}
+  if(!validate()){status.className="bad";status.textContent="Corrigez les champs signalés.";return}
+  const text=["Demande de devis TORZY DIGITAL","Nom : "+clean(form.name.value),"Téléphone : "+clean(form.phone.value),"Sujet : "+form.subject.value,"","Message : "+form.message.value.trim().slice(0,800)].join("\n");
+  const chan=form.chan.value;
+  if(chan==="wa"){
+    if(!/^\d{8,15}$/.test(wa)){status.className="bad";status.textContent="Le numéro WhatsApp n'est pas configuré. Choisissez l'e-mail ou renseignez CONFIG.whatsapp.";return}
+    window.open("https://wa.me/"+wa+"?text="+encodeURIComponent(text),"_blank","noopener,noreferrer");
+  }else{
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(CONFIG.email)){status.className="bad";status.textContent="L'adresse e-mail n'est pas configurée. Choisissez WhatsApp ou renseignez CONFIG.email.";return}
+    location.href="mailto:"+CONFIG.email+"?subject="+encodeURIComponent("Devis : "+form.subject.value)+"&body="+encodeURIComponent(text);
+  }
+  status.className="ok";status.textContent="Message prêt. Envoyez-le dans l'application qui vient de s'ouvrir.";
+});
+form.addEventListener("input",e=>{if(e.target.name in rules){const r=rules[e.target.name](e.target.value);if(r===true){e.target.setAttribute("aria-invalid","false");$('[data-for="'+e.target.name+'"]').textContent=""}}});
+</script>
+</body>
+</html>
